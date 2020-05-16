@@ -1,0 +1,702 @@
+﻿@charset "UTF-8";
+/*기본색*/
+:root {
+  --main-color:#053C80;
+  --accent-color: #043066;
+  --dark-color: #031E40;
+  --text-bright-color: #fff;
+  --large-width: 1000px;
+  --middle-width: 800px;
+}
+/*기본 설정: 폰트크기*/
+@media (max-width: 599px) {
+  :root {font-size: 14px}
+}
+@media (min-width: 600px) and (max-width: 799px) {
+  :root {font-size: 16px}
+}
+@media (min-width: 800px) {
+  :root {font-size: 18px}
+}
+body {font-size: 16px}
+/*기본 설정: 페이지 전체*/
+body {
+  margin:0;
+  font-family: 'Song Myung','Noto Sans KR', 'Do Hyeon', sans-serif;
+}
+
+/*콘텐츠A:헤더이미지*/
+.conA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 450px;
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)),url(img/smartport.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  color: var(--text-bright-color);
+  text-align: center;
+}
+.conA h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 15vw;
+  font-family: 'Saira Stencil One', cursive;
+  letter-spacing: 0.2em;
+  margin-left: 0.2em;
+}
+.conA p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-family: 'Do Hyeon', sans-serif;
+  line-height: 30px;
+  letter-spacing: 0.2em;
+  margin-left: 0.2em;
+}
+.conA img {
+  margin-right: 0.3em;
+  width:10%;
+}
+
+@media (min-width:768px) {
+  .conA h1{font-size: 115px;}
+  .conA p {font-size: 24px;}
+}
+/*글 목록*/
+.titlelist:link {text-decoration:none;}
+.titlelist:hover { text-decoration : underline;}
+/*글목록*/
+/*콘텐츠B: 개요(아이콘+글자)*/
+.conB text{
+  text-align: center;
+}
+.conB h2{
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.conB p{
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+.conB .container {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+.conB .text{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.conB .icon{
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 40px;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #ddd;
+  color: #fff;
+}
+.conB a {
+  display: inline-block;
+  margin-top: 20px;
+  letter-spacing: 0.3em;
+  padding: 10px 30px;
+  border: solid 3px currentColor;
+  border-radius: 6px;
+  background-color: #476180;
+  color: #fff;
+  color: var(--text-bright-color);
+  font-size: 14px;
+  text-decoration: none;
+}
+.conB a:hover{
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2));
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .conB .container{
+    display:flex;
+    max-width: 1000px;
+    max-width: var(--large-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .conB .text{
+    flex:1;
+  }
+}
+
+/*푸터*/
+footer {
+  color: #fff;
+  color: var(--text-bright-color);
+  background-color: #031E40;
+  background-color: var(--dark-color);
+}
+footer .container {
+  padding: 40px 20px;
+}
+@media (min-width: 768px) {
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    max-width: var(--large-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footA {flex: 0 0 40%}
+  .footB {flex: 0 0 60%}
+  .footC {flex: 0 0 100%}
+}
+/*푸터A: 사이트 정보*/
+.footA {
+  margin-bottom: 30px;
+}
+.footA h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Saira Stencil One', cursive;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+.footA p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.footA img {
+  margin-right: 0.3em;
+  height: 30px;
+  width: 30px;
+}
+/*푸터B: 푸터메뉴*/
+.footB div {
+  margin-bottom: 20px;
+}
+.footB h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: solid 1px currentColor;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.footB ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footB a {
+  display: block;
+  padding: 5px;
+  color: inherit;
+  font-size: 12px;
+  font-family: 'Noto Sans KR';
+  text-decoration: none;
+}
+.footB a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .footB {display: flex;}
+  .footB div {flex: 1;}
+  .footB div:not(:first-child) {margin-left: 40px;}
+}
+
+/*푸터C:저작권*/
+.footC {
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Saira Stencil One', cursive;
+}
+
+/*푸터D:SNS메뉴*/
+.footD {
+  margin-top: 20px;
+}
+.footD ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footD a {
+  margin-right: 8px;
+  display: block;
+  padding: 0;
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  border: solid 1px currentColor;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+}
+.footD a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+/*헤더*/
+header {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.nohero header {
+  position: static;
+  border-bottom: solid 1px #ddd;
+}
+/*헤더A:사이트 이름*/
+.headA {
+  display: inline-block;
+  line-height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #031E40;
+  color: #fff;
+  font-family:'Saira Stencil One', cursive;
+  font-size: 20px;
+  text-decoration: none;
+}
+/* 헤더B:메뉴*/
+.headB li ul {
+background: #AFBCCC;
+display:none;  /* 평상시에는 서브메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width: 150px;
+z-index:200;
+}
+.headB li:hover ul {
+display:block;   /* 마우스 커서 올리면 서브메뉴 보이게 하기 */
+}
+.headB ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.headB a {
+  display: block;
+  padding: 14px;
+  color: inherit;
+  font-size: 15px;
+  font-family: 'Noto Sans KR';
+  text-decoration: none;
+}
+.headB a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+@media (min-width:768px) {
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .headB ul {display:flex;}
+}
+/*헤더C:토글버튼*/
+@media (max-width:767px) {
+  header .container-small {
+    /*작은 화면 전용설정*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .headC {
+    margin-right: 10px;
+    padding: 0;
+    border:none;
+    outline:none;
+    background: none;
+    font-size: 28px;
+    opacity: 0.5;
+    cursor:pointer;
+  }
+  .headC:hover {
+    opacity:0.3;
+  }
+  .headB {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+  .headC{
+    /*큰 화면 전용설정*/
+    display: none;
+  }
+  .headB {
+    display: block !important;
+  }
+}
+
+/*소개 페이지 : 기사*/
+.post .container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.post h1 {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: solid 0.6rem #66160E;
+}
+.post h2 {
+  font-size: 1.5rem;
+  margin-top: 50px;
+  padding-left: 0.5rem;
+  border-left: solid 0.6rem #66160E;
+}
+.post p {font-size: 0.8rem; line-height: 2;}
+.post img {max-width: 100%;}
+/*소개 페이지 : 기사*/
+/*회원가입 페이지*/
+.registerpage {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.registerpage .container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 10px 0;
+}
+.registerpage h1 {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: solid 0.6rem #66160E;
+}
+.makeaccount-text {
+  padding-left: 0.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#chkName, #chkemail, #chkPhn, #chkId, #chkPw, #rechkPw{
+    color:#B9062F;
+    font-size:small;
+    padding-top:10px;
+
+}
+.register-box {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #ddd;
+  border-radius: 10px;
+}
+.info-input {
+  padding: 20px 50px;
+  line-height: 15px;
+}
+.info-input input {
+  min-width: 380px;
+}
+.check {
+  text-align: center;
+}
+.pre-scroller {
+  padding: 5px 20px;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  margin: 20px 50px;
+  background-color: #E8EBED;
+  font-size: 13px;
+}
+.register-button {
+  margin-top: 30px;
+  text-align: center;
+}
+.register-button>input[type=submit] {
+  display: inline-block;
+  margin-top: 6px;
+  letter-spacing:0.1em;
+  padding: 4px 20px;
+  border: solid 0px currentColor;
+  border-radius: 3px;
+  background-color: #476180;
+  color: #fff;
+
+  font-size: 18px;
+  text-decoration: none;
+}
+.register-button>input[type=submit]:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2));
+}
+/*회원가입 페이지*/
+/* 로그인 페이지 */
+.LOGIN .container {
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.login-container {
+  margin: 30px 90px;
+  border: solid 3px #2B3A4D;
+  border-radius: 10px;
+  padding-bottom: 80px;
+}
+.login-container h1 {
+  font-size: 40px;
+}
+.id {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.id .id-icon {
+  margin-right: 10px;
+}
+.id .id-icon span {
+  color: inherit;
+  font-size: 15px;
+  border: solid 1px currentColor;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+}
+.pw {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.pw .pw-icon {
+  margin-right: 10px;
+}
+.pw .pw-icon span {
+  color: inherit;
+  font-size: 15px;
+  border: solid 1px currentColor;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+}
+.login-button input[type=submit] {
+  display: inline-block;
+  margin-top: 6px;
+  letter-spacing: 0.1em;
+  padding: 4px 73px;
+  border: solid 3px currentColor;
+  border-radius: 6px;
+  background-color: #476180;
+  color: #fff;
+  color: var(--text-bright-color);
+  font-size: 18px;
+  text-decoration: none;
+}
+.login-button inpu[type=submit]:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2));
+}
+.register-find {
+  margin-top: 40px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 15px;
+}
+.register-find a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #A7304F;
+}
+/* 로그인 페이지 */
+/*소개 페이지 : 빵 부스러기 리스트*/
+.bread ol {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.bread a {
+  display: block;
+  padding: 5px;
+  color: inherit;
+  font-size: 0.875rem;
+  font-family: 'Noto Sans KR';
+  text-decoration: none;
+}
+.bread a::after {
+  margin-left: 10px;
+  content: '\f105';
+  font-family: 'FontAwesome';
+  opacity: 0.3;
+}
+.bread a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+/*문의페이지*/
+.contact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: solid 1px #ddd;
+  text-align: center;
+}
+.contact span {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #476180;
+  color: #fff;
+}
+.contact h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.contact a {
+  font-size: 1rem;
+  color:inherit;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .contact-wrap {display: flex;}
+  .contact {flex: 1;}
+  .contact:first-child{margin-right: 20px;}
+}
+/*계정 페이지*/
+.account-wrap {
+  justify-content: center;
+}
+.account {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: solid 1px #ddd;
+  text-align: center;
+}
+.account span {
+  display: inline-block;
+  margin-bottom: 0px;
+  font-size: 2.2rem;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #476180;
+  color: #fff;
+}
+.account a {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color:inherit;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .account-wrap {display: flex;}
+  .account {flex: 1;}
+  .account:first-child{margin-right: 20px;}
+}
+/*계정페이지*/
+/*팀원정보 페이지*/
+.teaminfo .container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 10px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.teaminfo h1 {
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  border-left: solid 0.6rem #66160E;
+}
+.teaminfo .container img {
+  font-size: 80px;
+  border: solid 3px #AFBCCC;
+  width: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  text-align: center;
+}
+.mentor {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.mentee {
+  border: solid 1px #ddd;
+  padding: 30px;
+  align-items: center;
+  margin: 10px auto;
+}
+.mentee p {
+  font-style: italic;
+  color: #043066;
+}
+.mentee-mail {display: flex;}
+.mentee-mail a {
+  text-decoration: none;
+  color: #CC685E;
+}
+.mentee-icon {
+  color: #CC685E;
+  margin-right: 10px;
+}
+.mentee1-img {text-align: center;}
+.mentee2-img {text-align: center;}
+.mentee3-img {text-align: center;}
+.mentee4-img {text-align: center;}
+@media (min-width: 768px) {
+  .mentee {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mentee1-img {flex: 1;}
+  .mentee1-txt {flex: 1; text-align: left;}
+  .mentee2-img {flex: 1;}
+  .mentee2-txt {flex: 1; text-align: left;}
+  .mentee3-img {flex: 1;}
+  .mentee3-txt {flex: 1; text-align: left;}
+  .mentee4-img {flex: 1;}
+  .mentee4-txt {flex: 1; text-align: left;}
+}
+@media (max-width: 767px) {
+  .mentee1-txt {text-align: center;}
+  .mentee2-txt {text-align: center;}
+  .mentee3-txt {text-align: center;}
+  .mentee4-txt {text-align: center;}
+  .mentee-mail {justify-content: center;}
+}
+/*팀원정보 페이지*/
